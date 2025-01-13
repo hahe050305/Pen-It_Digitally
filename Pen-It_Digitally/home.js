@@ -1,4 +1,3 @@
-// Select DOM elements
 var popupOverlay = document.querySelector(".popup-overlay");
 var popupBox = document.querySelector(".popup-box");
 var addPopup = document.getElementById("popup");
@@ -18,20 +17,17 @@ var welcomeText = document.getElementById("welcome-text");
 var result = document.getElementById("result");
 var aboutUs = document.getElementById("abouts-us");
 
-// Show popup for adding a new event
 addPopup.addEventListener("click", function () {
     popupOverlay.style.display = "block";
     popupBox.style.display = "block";
 });
 
-// Cancel and hide the event popup
 cancelPopup.addEventListener("click", function (event) {
     event.preventDefault();
     popupOverlay.style.display = "none";
     popupBox.style.display = "none";
 });
 
-// Add a new book/event
 addBook.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -52,17 +48,14 @@ addBook.addEventListener("click", function (event) {
     eventDate.value = "";
     eventDesc.value = "";
 
-    // Hide popup
     popupOverlay.style.display = "none";
     popupBox.style.display = "none";
 });
 
-// Delete a card/event
 function DeleteCard(event) {
     event.target.parentElement.remove();
 }
 
-// Welcome message
 welcomeButton.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -79,12 +72,10 @@ welcomeButton.addEventListener("click", function (event) {
     welcomeTextBox.style.display = "none";
 });
 
-// Navigate to "About Us" page
 aboutUs.addEventListener("click", function () {
-    window.location.href = "about.html";
+    window.location.href = "about-us.html";
 });
 
-// Handle popup visibility based on flag
 document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("hidePopup") === "true") {
         welcomeBox.style.display = "none";
@@ -95,22 +86,3 @@ document.addEventListener("DOMContentLoaded", function () {
         welcomeTextBox.style.display = "block";
     }
 });
-
-// Display welcome message immediately if the user previously entered their name
-/*if (welcomeText.value) 
-{
-    var h2 = document.createElement("h2");
-    h2.textContent = "Welcome back, " + welcomeText.value + "!";
-    result.append(h2);
-
-    
-    h2.style.color = "orangered"
-    h2.style.textAlign = "center"
-    h2.style.backgroundColor = "black"
-    h2.style.opacity = "0.8"
-
-
-    welcomebox.style.display = "none"
-    welcometext.style.display = "none"
-
-}*/
