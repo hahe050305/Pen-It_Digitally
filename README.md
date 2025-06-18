@@ -9,9 +9,9 @@ This hands-on project is built using basic functionalities of JavaScript:
 
 coupled along with the visually appealing CSS and major concepts of CSS like:
 
-    (positioning) -> Used in styling the add button and for perfect placement in the webpage.
-    (Z-index) -> To avoid the overlap between the cards and the background image.
-    (two div's) -> To hide the content in the background and display the welcome pop-up (set in the block mode for full-screen coverage)
+(positioning) -> Used in styling the add button and for psoitioning it in the webpage.
+(Z-index) -> To avoid the overlap between the cards and the background image.
+(two div's) -> To hide the content in the background and display the welcome pop-up (set in the block mode for full-screen coverage)
 
 The overall layout of this project is scaffolded into three main section:
 
